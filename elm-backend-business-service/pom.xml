@@ -8,10 +8,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>elm-backend-point-service</artifactId>
+    <artifactId>elm-backend-business-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>elm-backend-point-service</name>
-    <description>elm-backend-point-service</description>
+    <name>elm-backend-business-service</name>
+    <description>elm-backend-business-service</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -19,17 +19,6 @@
         <spring-boot.version>2.6.13</spring-boot.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
         <dependency>
             <groupId>com.neusoft</groupId>
             <artifactId>elm-backend-common</artifactId>
@@ -40,6 +29,17 @@
             <groupId>com.neusoft</groupId>
             <artifactId>elm-backend-model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <dependencyManagement>
@@ -71,7 +71,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.neusoft.elmbackendpointservice.ElmBackendPointServiceApplication</mainClass>
+                    <mainClass>com.neusoft.elmbackendbusinessservice.ElmBackendBusinessServiceApplication</mainClass>
                     <skip>true</skip>
                 </configuration>
                 <executions>

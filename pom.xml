@@ -11,6 +11,17 @@
     <modules>
         <module>elm-backend-common</module>
         <module>elm-backend-model</module>
+        <module>elm-backend-service-client</module>
+        <module>elm-backend-gateway</module>
+        <module>elm-backend-user-service</module>
+        <module>elm-backend-food-service</module>
+        <module>elm-backend-business-service</module>
+        <module>elm-backend-cart-service</module>
+        <module>elm-backend-deliveryAddress-service</module>
+        <module>elm-backend-orders-service</module>
+        <module>elm-backend-virtualWallet-service</module>
+        <module>elm-backend-point-service</module>
+
     </modules>
     <properties>
         <java.version>1.8</java.version>
@@ -70,6 +81,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.4</version>
         </dependency>
     </dependencies>
     <dependencyManagement>
