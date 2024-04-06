@@ -9,6 +9,7 @@ import com.neusoft.elmbackendmodel.model.vo.UserVo;
 import com.neusoft.elmbackenduserservice.mapper.PointMapper;
 import com.neusoft.elmbackenduserservice.mapper.UserMapper;
 import com.neusoft.elmbackenduserservice.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
+@Slf4j
 public class UserServiceImpl implements UserService {
 
     @Autowired

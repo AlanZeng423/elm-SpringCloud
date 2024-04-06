@@ -1,7 +1,7 @@
 package com.neusoft.elmbackendvirtualwalletservice.service;
 
-import com.neusoft.elmboot.model.vo.TransactionFlowVo;
-import com.neusoft.elmboot.model.vo.VirtualWalletVo;
+import com.neusoft.elmbackendmodel.model.vo.TransactionFlowVo;
+import com.neusoft.elmbackendmodel.model.vo.VirtualWalletVo;
 
 import java.util.List;
 

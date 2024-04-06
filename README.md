@@ -30,3 +30,9 @@ model 模型模块（elm-backend-model）：服务公用的实体类
 Nacos注册中心使用2.2.0版本 和 Spring-Cloud的2021.0.5.0版本一直
 在nacos的bin目录中 执行startup.cmd -m standalone，启动nacos
 ![img.png](picture/img.png)
+
+### 4. 修改完毕代码后，执行如下：
+![img.png](picture/img2.png)
+
+### 5. 使用swagger2验证端口执行情况
+![img.png](picture/img3.png)

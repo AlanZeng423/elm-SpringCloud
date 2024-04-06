@@ -7,13 +7,15 @@ import com.neusoft.elmbackendcommon.common.ErrorCode;
 import com.neusoft.elmbackendcommon.common.ResultUtils;
 import com.neusoft.elmbackendcommon.exception.BusinessException;
 import com.neusoft.elmbackenduserservice.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/")
+@Slf4j
 public class UserController {
 
     @Autowired

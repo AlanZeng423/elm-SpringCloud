@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/deliveryAddress")
+@RequestMapping("/")
 public class DeliveryAddressController {
     @Autowired
     private DeliveryAddressService deliveryAddressService;

@@ -7,28 +7,32 @@ import com.neusoft.elmbackendcommon.common.ResultUtils;
 import com.neusoft.elmbackendcommon.exception.BusinessException;
 import com.neusoft.elmbackendmodel.model.vo.TransactionFlowVo;
 import com.neusoft.elmbackendmodel.model.vo.VirtualWalletVo;
+import com.neusoft.elmbackendserviceclient.service.UserFeignClient;
 import com.neusoft.elmbackendvirtualwalletservice.service.VirtualWalletService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
-@RequestMapping("/virtualWallet")
+@RequestMapping("/")
+@Slf4j
 public class VirtualWalletController {
 
     @Autowired
     private VirtualWalletService virtualWalletService;
 
-    @Autowired
-    private UserService userService;
+    @Resource
+    private UserFeignClient userFeignClient;
 
     @PostMapping("/newWallet/{userId}")
     public BaseResponse<Integer> saveWallet(@PathVariable(value = "userId") String userId) {
         if (userId == null) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "请求参数不可为空");
         }
-        if (userService.getUserById(userId) != 1) {
+        if (userFeignClient.getUserById(userId) != 1) {
             throw new BusinessException(ErrorCode.SYSTEM_ERROR, "当前用户 " + userId + " 不存在");
         }
         if (virtualWalletService.getWallet(userId) != null) {

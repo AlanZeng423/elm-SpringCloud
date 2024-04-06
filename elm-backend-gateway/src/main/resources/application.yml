@@ -43,7 +43,6 @@ spring:
     web-application-type: reactive
 server:
   port: 14000
-
 knife4j:
   gateway:
     # ① 第一个配置，开启gateway聚合组件

@@ -2,10 +2,11 @@ package com.neusoft.elmbackendserviceclient.service;
 
 
 import com.neusoft.elmbackendmodel.model.vo.CartVo;
+import org.springframework.cloud.openfeign.FeignClient;
 
 import java.util.List;
-
-public interface CartService {
+@FeignClient(name = "elm-backend-cart-service", path = "/api/cart/inner")
+public interface CartFeignClient {
     public List<CartVo> listCart(Integer cartId, String userId, Integer businessId);
 
     public int saveCart(Integer cartId, Integer businessId, Integer foodId);

@@ -3,10 +3,11 @@ package com.neusoft.elmbackendserviceclient.service;
 
 import com.neusoft.elmbackendmodel.model.vo.TransactionFlowVo;
 import com.neusoft.elmbackendmodel.model.vo.VirtualWalletVo;
+import org.springframework.cloud.openfeign.FeignClient;
 
 import java.util.List;
-
-public interface VirtualWalletService {
+@FeignClient(name = "elm-backend-virtualWallet-service", path = "/api/virtualWallet/inner")
+public interface VirtualWalletFeignClient {
     /**
      * 新建钱包
      *

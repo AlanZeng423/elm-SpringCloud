@@ -11,6 +11,7 @@ import com.neusoft.elmbackendmodel.model.vo.VirtualWalletVo;
 import com.neusoft.elmbackendvirtualwalletservice.mapper.TransactionFlowMapper;
 import com.neusoft.elmbackendvirtualwalletservice.mapper.VirtualWalletMapper;
 import com.neusoft.elmbackendvirtualwalletservice.service.VirtualWalletService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@Slf4j
 public class VirtualWalletServiceImpl implements VirtualWalletService {
     @Autowired
     private VirtualWalletMapper virtualWalletMapper;
